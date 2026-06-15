@@ -53,4 +53,37 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("hashchange", routeFromHash);
   routeFromHash();
+
+  /* ---------------------------------------------
+     Contact form -> WhatsApp
+     --------------------------------------------- */
+  const WHATSAPP_NUMBER = "819023774848"; // international format, no + or leading 0
+
+  const whatsappForm = document.getElementById("whatsapp-form");
+  if (whatsappForm) {
+    whatsappForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = whatsappForm.querySelector("#name").value.trim();
+      const email = whatsappForm.querySelector("#email").value.trim();
+      const interest = whatsappForm.querySelector("#interest").value;
+      const message = whatsappForm.querySelector("#message").value.trim();
+
+      const lines = [
+        "Hello P.E.A, I'd like to get in touch.",
+        "",
+        `Name: ${name}`,
+        `Email: ${email}`,
+        `Interested in: ${interest}`,
+        "",
+        "Message:",
+        message,
+      ];
+
+      const text = encodeURIComponent(lines.join("\n"));
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+
+      window.open(url, "_blank", "noopener");
+    });
+  }
 });
