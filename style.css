@@ -3,14 +3,14 @@
    Design tokens
    ============================================ */
 :root {
-  --ink: #FFFFFF;         /* main background — clean white */
-  --navy: #FAFAFA;        /* card/section background — soft off-white, lifts off white */
+  --ink: #F2EFE8;         /* main background — warm light grey, not stark white */
+  --navy: #E8E2D5;        /* card/section background — deeper warm beige */
   --paper: #14130F;       /* main text color — true near-black */
-  --gold: #B8860B;        /* primary accent — dark gold, AA contrast on white */
+  --gold: #B8860B;        /* primary accent — dark gold, AA contrast on light bg */
   --gold-light: #D4A017;  /* lighter gold for gradients/hover */
   --vermilion: #A33B2E;   /* secondary accent, unchanged */
-  --slate: #5C5A54;       /* muted text — warm grey, readable on white */
-  --border: rgba(184, 134, 11, 0.25);
+  --slate: #5C5A54;       /* muted text — warm grey, readable on light bg */
+  --border: rgba(184, 134, 11, 0.3);
 
   --display: "Poppins", "Plus Jakarta Sans", sans-serif;
   --body: "Plus Jakarta Sans", "Inter", sans-serif;
@@ -109,7 +109,7 @@ header.site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(242, 239, 232, 0.92);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
 }
@@ -432,7 +432,7 @@ header.site-header {
   overflow: hidden;
   background:
     linear-gradient(160deg, rgba(184,134,11,0.10), rgba(0,0,0,0.04) 70%),
-    #F2F2F0;
+    #E5DFD2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -469,7 +469,7 @@ header.site-header {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold);
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(242, 239, 232, 0.9);
   padding: 3px 8px;
   border-radius: 2px;
   z-index: 1;
